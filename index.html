@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Presentation Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-ornament bg-ornament-left"></div>
+  <div class="bg-ornament bg-ornament-right"></div>
+
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">Practice Studio</p>
+      <h1>Live Presentation Coach</h1>
+      <p class="subtitle">
+        Rehearse with your laptop camera and microphone, then get instant feedback on pace, filler words, pauses, and delivery energy.
+      </p>
+    </header>
+
+    <section class="panel controls-panel">
+      <div class="controls-grid">
+        <button id="startBtn" class="btn btn-primary">Start Live Coaching</button>
+        <button id="stopBtn" class="btn btn-secondary" disabled>Stop Session</button>
+        <button id="downloadBtn" class="btn btn-ghost" disabled>Download Recording</button>
+      </div>
+      <p id="statusText" class="status">Status: idle</p>
+      <p id="supportText" class="support"></p>
+    </section>
+
+    <section class="layout-grid">
+      <article class="panel video-panel">
+        <h2>Camera Preview</h2>
+        <video id="previewVideo" autoplay muted playsinline></video>
+        <div class="timer-wrap">
+          <span class="label">Session Time</span>
+          <strong id="sessionTimer">00:00</strong>
+        </div>
+      </article>
+
+      <article class="panel metrics-panel">
+        <h2>Live Metrics</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-title">Words Per Minute</span>
+            <strong id="wpmMetric">0</strong>
+            <small>Target: 120-160</small>
+          </div>
+          <div class="metric-card">
+            <span class="metric-title">Filler Words</span>
+            <strong id="fillerMetric">0</strong>
+            <small>Examples: um, uh, like</small>
+          </div>
+          <div class="metric-card">
+            <span class="metric-title">Long Pauses</span>
+            <strong id="pauseMetric">0</strong>
+            <small>Pauses above 2 sec</small>
+          </div>
+          <div class="metric-card">
+            <span class="metric-title">Vocal Energy</span>
+            <strong id="energyMetric">0%</strong>
+            <small>Based on mic level</small>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel transcript-panel">
+      <h2>Live Transcript</h2>
+      <p id="transcriptText" class="transcript">Your transcript will appear here after speech is detected.</p>
+    </section>
+
+    <section class="panel feedback-panel">
+      <h2>Coaching Feedback</h2>
+      <ul id="feedbackList" class="feedback-list">
+        <li>Start a session to get personalized feedback.</li>
+      </ul>
+      <div class="score-wrap">
+        <span class="label">Overall Practice Score</span>
+        <strong id="overallScore">--</strong>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
