@@ -74,6 +74,32 @@
       <p id="transcriptText" class="transcript">Your transcript will appear here after speech is detected.</p>
     </section>
 
+    <section class="panel debate-panel">
+      <h2>Live Debate Mode</h2>
+      <div class="debate-grid">
+        <label class="field-group" for="debateTopicInput">
+          <span class="label">Debate Topic</span>
+          <input id="debateTopicInput" type="text" placeholder="Example: AI should replace traditional exams" />
+        </label>
+        <label class="field-group" for="userStanceSelect">
+          <span class="label">Your Position</span>
+          <select id="userStanceSelect">
+            <option value="for">I am For the topic</option>
+            <option value="against">I am Against the topic</option>
+          </select>
+        </label>
+      </div>
+      <div class="controls-grid debate-controls">
+        <button id="enableDebateBtn" class="btn btn-primary">Enable Debate</button>
+        <button id="disableDebateBtn" class="btn btn-secondary" disabled>Disable Debate</button>
+      </div>
+      <p id="debateStatusText" class="status">Debate status: off</p>
+      <p id="lastUserPointText" class="support">Your last argument: not captured yet.</p>
+      <div id="debateFeed" class="debate-feed">
+        <p class="debate-line"><strong>AI</strong>: Enable debate mode during a live session and I will challenge your points with spoken cross-arguments.</p>
+      </div>
+    </section>
+
     <section class="panel feedback-panel">
       <h2>Coaching Feedback</h2>
       <ul id="feedbackList" class="feedback-list">

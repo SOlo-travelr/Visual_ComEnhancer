@@ -12,6 +12,18 @@ This project gives you a live presentation practice interface using your laptop 
 - Estimates vocal energy from mic levels
 - Generates coaching feedback and an overall score when you stop
 - Lets you download the recorded practice session
+- Includes live debate mode with AI counterarguments
+- Speaks AI rebuttals through laptop speakers using browser text-to-speech
+
+## Debate mode
+
+1. Click `Start Live Coaching` and allow camera/microphone.
+2. Enter a debate topic.
+3. Choose your position (For or Against).
+4. Click `Enable Debate`.
+5. Speak your arguments in English.
+6. After short pauses, AI gives cross-arguments and reads them aloud.
+7. Click `Disable Debate` to stop debate responses.
 
 ## Requirements
 
@@ -40,6 +52,7 @@ python -m http.server 5500
 
 - Live transcript uses Web Speech API, which is browser-dependent.
 - If transcript is not supported, recording and audio energy tracking still work.
+- Debate voice replies use browser Speech Synthesis API.
 - For reliable feedback, practice for at least 2 minutes.
 
 ## Next upgrade ideas
